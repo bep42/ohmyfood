@@ -6,7 +6,16 @@
 body, html {
     font-size: $base-font-size;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    color: black;
+    background-color: white;
 }
 
-.title {font-family: 'Shrikhand', cursive;}
+// titles 
+.title, h1, h2, h3, h4, h5, h6 {font-family: 'Shrikhand', cursive;}
+
+// container
+.main {
+    max-width: $tablet;
+    width: 100%;
+}
 

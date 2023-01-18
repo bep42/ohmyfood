@@ -94,10 +94,17 @@ td, th {
 body, html {
   font-size: 16px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  color: black;
+  background-color: white;
 }
 
-.title {
+.title, h1, h2, h3, h4, h5, h6 {
   font-family: "Shrikhand", cursive;
+}
+
+.main {
+  max-width: 992px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

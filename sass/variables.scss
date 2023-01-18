@@ -6,6 +6,10 @@ $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
 
+$light-grey: #f7f7f7;
+$grey: #eaeaea;
+$dark-grey: #353535;
+
 // color classes
 .primary {color: $primary;}
 .secondary {color: $secondary;}
@@ -15,3 +19,7 @@ $tertiary: #99E2D0;
 .bg-primary {background-color: $primary;}
 .bg-primary {background-color: $primary;}
 .bg-primary {background-color: $primary;}
+
+// screen sizes
+$tablet: 992px;
+$mobile: 768px;
