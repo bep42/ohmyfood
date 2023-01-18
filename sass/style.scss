@@ -70,7 +70,7 @@ header {
     display: flex;
     background-color: $grey;
     padding: $space-sm $space-none;
-    color: lighten($color-base, 30%);
+    color: $dark-grey;
 
     i {margin-right: $space-sm;}
 }
