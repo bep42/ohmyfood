@@ -43,59 +43,11 @@ td, th {
   padding: 0;
 }
 
-.primary {
-  color: #9356DC;
-}
-
-.secondary {
-  color: #FF79DA;
-}
-
-.tertiary {
-  color: #99E2D0;
-}
-
-.bg-primary {
-  background-color: #9356DC;
-}
-
-.bg-primary {
-  background-color: #9356DC;
-}
-
-.bg-primary {
-  background-color: #9356DC;
-}
-
-.primary {
-  color: #9356DC;
-}
-
-.secondary {
-  color: #FF79DA;
-}
-
-.tertiary {
-  color: #99E2D0;
-}
-
-.bg-primary {
-  background-color: #9356DC;
-}
-
-.bg-primary {
-  background-color: #9356DC;
-}
-
-.bg-primary {
-  background-color: #9356DC;
-}
-
 body, html {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
-  color: #000000;
-  background-color: #FFFFFF;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   font-weight: 400;
 }
 
@@ -103,34 +55,28 @@ header, nav, article, section, footer {
   display: flex;
 }
 
-#content {
-  max-width: 992px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 h1 {
-  font-size: 22.4px;
+  font-size: 24px;
 }
 
 h2 {
-  font-size: 19.2px;
+  font-size: 22.4px;
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 19.2px;
 }
 
 h4 {
-  font-size: 12.8px;
+  font-size: 16px;
 }
 
 h5 {
-  font-size: 9.6px;
+  font-size: 12.8px;
 }
 
 h6 {
-  font-size: 8px;
+  font-size: 9.6px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -138,10 +84,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn {
-  color: #FFFFFF;
-  background-image: linear-gradient(345deg, #9356DC -5.2%, #FF79DA 110.74%);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-image: linear-gradient(345deg, rgb(147, 86, 220), rgb(255, 121, 218));
   padding: 12.8px 25.6px;
   border-radius: 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+  transition: ease-in 300ms;
+}
+.btn:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  background-image: linear-gradient(345deg, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+}
+.btn:focus, .btn:active {
+  background-image: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(147, 86, 220);
 }
 
 header {
@@ -151,7 +109,7 @@ header nav {
   align-items: center;
   justify-content: center;
   flex-basis: 100%;
-  background-color: #FFFFFF;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 16px 0;
 }
@@ -164,7 +122,7 @@ header nav img {
   flex: 1;
   justify-content: center;
   display: flex;
-  background-color: #eaeaea;
+  background-color: rgb(234, 234, 234);
   padding: 12.8px 0;
   color: #4d4d4d;
 }
@@ -179,10 +137,11 @@ header nav img {
   align-items: center;
   text-align: center;
   padding: 51.2px 0;
-  background-color: #f7f7f7;
+  background-color: rgb(247, 247, 247);
 }
 .hero h1 {
   text-align: center;
+  font-size: 40px;
 }
 .hero .lead {
   font-weight: 300;

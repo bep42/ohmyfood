@@ -2,30 +2,18 @@
 $base-font-size: 16px;
 
 // colors - main
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
+$primary: rgba(147, 86, 220, 1);
+$secondary: rgba(255, 121, 218, 1);
 // colors - base
-$color-base: #000000;
-$white: #FFFFFF;
-$light-grey: #f7f7f7;
-$grey: #eaeaea;
-$dark-grey: #353535;
-$light-green: #99E2D0;
-$green: #008766;
-$light-blue: #89C8FA;
-$blue: #003A68;
-
-
-// color classes
-.primary {color: $primary;}
-.secondary {color: $secondary;}
-.tertiary {color: $tertiary;}
-
-// bg color classes
-.bg-primary {background-color: $primary;}
-.bg-primary {background-color: $primary;}
-.bg-primary {background-color: $primary;}
+$color-base: rgba(0, 0, 0, 1);
+$white: rgb(255, 255, 255);;
+$light-grey: rgba(247, 247, 247, 1);
+$grey: rgba(234, 234, 234, 1);
+$dark-grey: rgba(53, 53, 53, 1);
+$light-green: rgba(153, 226, 208, 1);
+$green: rgba(0, 135, 102, 1);
+$light-blue: rgba(137, 200, 250, 1);
+$blue: rgba(0, 58, 104, 1);
 
 // paddings & margins
 $space-none: 0;
