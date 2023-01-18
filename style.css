@@ -93,6 +93,7 @@ td, th {
 
 body, html {
   font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
 .title {
