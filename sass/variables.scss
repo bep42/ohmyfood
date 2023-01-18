@@ -20,6 +20,19 @@ $dark-grey: #353535;
 .bg-primary {background-color: $primary;}
 .bg-primary {background-color: $primary;}
 
+// paddings & margins
+$margin-none: 0;
+$margin-sm: ($base-font-size * .8);
+$margin-base: $base-font-size;
+$margin-md: ($base-font-size * 1.6);
+$margin-lg: ($base-font-size * 2.4);
+
+$padding-none: 0;
+$padding-sm: ($base-font-size * .8);
+$padding-base: $base-font-size;
+$padding-md: ($base-font-size * 1.6);
+$padding-lg: ($base-font-size * 2.4);
+
 // screen sizes
 $tablet: 992px;
 $mobile: 768px;

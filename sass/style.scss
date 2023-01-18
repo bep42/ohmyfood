@@ -10,12 +10,42 @@ body, html {
     background-color: white;
 }
 
-// titles 
-.title, h1, h2, h3, h4, h5, h6 {font-family: 'Shrikhand', cursive;}
-
 // container
-.main {
+header, nav, article, section, footer {display: flex;}
+#content {
     max-width: $tablet;
     width: 100%;
+    margin: 0 auto;
+}
+
+// header
+header {
+    flex-basis: 100%;
+
+    nav {
+        align-items: center;
+        justify-content: center;
+        flex-basis: 100%;
+        background-color: white;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .2);
+
+        img {
+            height: 32px;
+            display: flex;
+        }
+    }
+}
+// location
+.location {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    background-color: $grey;
+}
+
+// hero
+.hero {
+    display: flex;
+    flex-direction: column;
 }
 

@@ -98,13 +98,41 @@ body, html {
   background-color: white;
 }
 
-.title, h1, h2, h3, h4, h5, h6 {
-  font-family: "Shrikhand", cursive;
+header, nav, article, section, footer {
+  display: flex;
 }
 
-.main {
+#content {
   max-width: 992px;
   width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  flex-basis: 100%;
+}
+header nav {
+  align-items: center;
+  justify-content: center;
+  flex-basis: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+header nav img {
+  height: 32px;
+  display: flex;
+}
+
+.location {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  background-color: #eaeaea;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
