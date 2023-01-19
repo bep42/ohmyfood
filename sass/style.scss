@@ -14,6 +14,11 @@ body, html {
 
 // container
 header, nav, article, section, footer {display: flex;}
+main {
+    h2 {
+        margin: $space-md $space-none;
+    }
+}
 
 // titles
 h1 {font-size: ($base-font-size * 1.5);}
@@ -66,8 +71,7 @@ header {
 }
 // location
 .location {
-    @include block-space;
-
+    padding: $space-base $space-none;
     flex: 1;
     justify-content: center;
     display: flex;
@@ -79,12 +83,12 @@ header {
 
 // hero
 .hero {
+    @include block-space;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: $space-xl $space-md;
     background-color: $light-grey;
     
     h1 {
@@ -102,10 +106,6 @@ header {
 .steps {
     @include block-space;
     @include mobile-align;
-
-    h2 {
-        margin-bottom: $space-md;
-    }
 
     .steps-card {
         @include box-shadow;
@@ -134,16 +134,51 @@ header {
 .restaurants {
     @include block-space;
     @include mobile-align;
-
-    h2 {
-        margin-bottom: $space-md;
-    }
+    background-color: $light-grey;
+    gap: $space-md;
 
     .card {
         @include box-shadow;
         background-color: $white;
         flex-direction: column;
         border-radius: 20px;
+        position: relative;
+
+        a {
+            text-decoration: none;
+            color: $color-base;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            bottom: ($space-base * 2);
+            right: $space-md;
+            font-size: 1.375rem;
+            
+            &:before {
+                font: var(--fa-font-regular); 
+                content: "\f004";  
+                color: $color-base;              
+            }
+
+            &:hover:before {
+                cursor: pointer;
+                font: var(--fa-font-solid);
+                content: "\f004";
+                background: linear-gradient(345deg, $primary, $secondary);
+                @include background-clip;
+                @include text-fill;
+            }
+            &:focus:before {
+                font: var(--fa-font-solid); 
+                content: "\f004";
+                background: linear-gradient(345deg, $primary, $secondary);
+                @include background-clip;
+                @include text-fill;
+            }
+        }
 
         .card-thumbnail {
             position: relative;
@@ -173,6 +208,7 @@ header {
             display: flex;
             flex-direction: row;
             align-items: center;
+            position: relative;
 
             .card-title {
                 flex-basis: 86%;
@@ -183,18 +219,6 @@ header {
                 }
                 p {
                     font-weight: 300;
-                }
-            }
-            .card-like {
-                align-items: center;
-                justify-content: center;
-                flex: 1;
-                display: flex;
-
-                i {
-                    font-size: 1.375rem;
-                    width: 22px;
-                    height: 22px;
                 }
             }
         }
