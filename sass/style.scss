@@ -1,6 +1,7 @@
 @import "reset.scss";
 @import "variables.scss";
 @import "functions.scss";
+@import "mixins.scss";
 
 // hello code
 body, html {
@@ -65,11 +66,12 @@ header {
 }
 // location
 .location {
+    @include block-space;
+
     flex: 1;
     justify-content: center;
     display: flex;
     background-color: $grey;
-    padding: $space-sm $space-none;
     color: $dark-grey;
 
     i {margin-right: $space-sm;}
@@ -98,23 +100,20 @@ header {
 
 // steps
 .steps {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: $space-md;
+    @include block-space;
+    @include mobile-align;
 
     h2 {
         margin-bottom: $space-md;
     }
 
     .steps-card {
+        @include box-shadow;
         justify-content: flex-start;
         background-color: $light-grey;
         border-radius: 1.25rem;
         margin: $space-sm $space-none;
         padding: $space-md $space-base;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, .15);
         font-weight: 400;
 
         i {
@@ -126,6 +125,77 @@ header {
             background-color: lighten($primary, 35%); 
             i {
                 color: $primary;
+            }
+        }
+    }
+}
+
+// restaurants
+.restaurants {
+    @include block-space;
+    @include mobile-align;
+
+    h2 {
+        margin-bottom: $space-md;
+    }
+
+    .card {
+        @include box-shadow;
+        background-color: $white;
+        flex-direction: column;
+        border-radius: 20px;
+
+        .card-thumbnail {
+            position: relative;
+            .badge {
+                color: $green;
+                font-size: $base-font-size;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, .15);
+                border-radius: 2px;
+                padding: $space-xs $space-sm;
+                position: absolute;
+                top: $space-sm;
+                right: $space-sm;
+
+                &.badge-success {
+                    background-color: $light-green;
+                }
+            }
+            img {
+                height: 200px;
+                object-fit: cover;
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+        .card-content {
+            padding: $space-md;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .card-title {
+                flex-basis: 86%;
+                justify-content: flex-start;
+
+                h3 {
+                    margin-bottom: ($space-sm / 2);
+                }
+                p {
+                    font-weight: 300;
+                }
+            }
+            .card-like {
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                display: flex;
+
+                i {
+                    font-size: 1.375rem;
+                    width: 22px;
+                    height: 22px;
+                }
             }
         }
     }

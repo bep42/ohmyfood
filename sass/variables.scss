@@ -18,6 +18,7 @@ $blue: rgba(0, 58, 104, 1);
 
 // paddings & margins
 $space-none: 0;
+$space-xs: ($base-font-size * .4);
 $space-sm: ($base-font-size * .8);
 $space-base: $base-font-size;
 $space-md: ($base-font-size * 1.6);
@@ -27,3 +28,6 @@ $space-xl: ($base-font-size * 3.2);
 // screen sizes
 $tablet: 992px;
 $mobile: 768px;
+
+// badge
+

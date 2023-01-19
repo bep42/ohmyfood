@@ -1,0 +1,14 @@
+@mixin block-space {
+    padding: $space-lg $space-md;
+    width: 100%;
+    display: flex;
+}
+
+@mixin mobile-align {
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin box-shadow {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, .15);
+}
