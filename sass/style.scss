@@ -135,6 +135,7 @@ header {
     @include block-space;
     @include mobile-align;
     background-color: $light-grey;
+    padding-bottom: $space-xl;
     gap: $space-md;
 
     .card {
@@ -222,6 +223,40 @@ header {
                 }
             }
         }
+    }
+}
+
+// footer 
+footer {
+    @include block-space;
+    @include mobile-align;
+    
+    background-color: $dark-grey;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: 300;
+
+    .logo {
+        height: 27px;
+        fill: $white;
+        margin-bottom: $space-md;
+        filter: invert(1);
+    }
+
+    li {
+        line-height: 1.7;
+        &:nth-child(-n + 3) {
+            font-weight: 400;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+
+    i {
+        margin-right: $space-sm;
     }
 }
 
