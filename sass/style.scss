@@ -73,11 +73,15 @@ header {
             align-items: center;
             justify-content: center;
             flex: 1;
+            margin-left: -($space-base * 2);
+
+            &.nomenu {
+                margin-left: 0;
+            }
 
             img {
                 height: 34px;
                 display: flex;
-                margin-left: -($space-base * 2);
             }
         }
         

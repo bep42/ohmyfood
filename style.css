@@ -128,11 +128,14 @@ header nav .logo {
   align-items: center;
   justify-content: center;
   flex: 1;
+  margin-left: -32px;
+}
+header nav .logo.nomenu {
+  margin-left: 0;
 }
 header nav .logo img {
   height: 34px;
   display: flex;
-  margin-left: -32px;
 }
 header nav .back {
   display: flex;
