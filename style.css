@@ -111,6 +111,47 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(147, 86, 220);
 }
 
+.like {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 32px;
+  right: 25.6px;
+  font-size: 1.375rem;
+}
+.like:before {
+  font: var(--fa-font-regular);
+  content: "\f004";
+  color: rgb(0, 0, 0);
+}
+.like:hover:before {
+  cursor: pointer;
+  font: var(--fa-font-solid);
+  content: "\f004";
+  background: linear-gradient(345deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+}
+.like:focus:before {
+  font: var(--fa-font-solid);
+  content: "\f004";
+  background: linear-gradient(345deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+}
+
 header {
   flex-basis: 100%;
 }
@@ -228,46 +269,6 @@ header nav .back i {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
-.restaurants .card button {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  bottom: 32px;
-  right: 25.6px;
-  font-size: 1.375rem;
-}
-.restaurants .card button:before {
-  font: var(--fa-font-regular);
-  content: "\f004";
-  color: rgb(0, 0, 0);
-}
-.restaurants .card button:hover:before {
-  cursor: pointer;
-  font: var(--fa-font-solid);
-  content: "\f004";
-  background: linear-gradient(345deg, rgb(147, 86, 220), rgb(255, 121, 218));
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -ms-background-clip: text;
-  -o-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -ms-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
-}
-.restaurants .card button:focus:before {
-  font: var(--fa-font-solid);
-  content: "\f004";
-  background: linear-gradient(345deg, rgb(147, 86, 220), rgb(255, 121, 218));
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -ms-background-clip: text;
-  -o-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -ms-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
-}
 .restaurants .card .card-thumbnail {
   position: relative;
 }
@@ -291,7 +292,7 @@ header nav .back i {
   border-radius: 20px 20px 0 0;
 }
 .restaurants .card .card-content {
-  padding: 25.6px;
+  padding: 16px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -325,6 +326,20 @@ header nav .back i {
   border-radius: 40px 40px 0px 0px;
   margin-top: -48px;
   position: relative;
+}
+.restaurant-details .restaurant-details-content .restaurant-details-content-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-basis: 100%;
+}
+.restaurant-details .restaurant-details-content .restaurant-details-content-title h1 {
+  flex-basis: 86%;
+  justify-content: flex-start;
+}
+.restaurant-details .restaurant-details-content .restaurant-details-content-title .like {
+  display: flex;
+  justify-content: center;
 }
 
 footer {

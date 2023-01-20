@@ -33,7 +33,7 @@ h5 {font-size: ($base-font-size * .8);}
 h6 {font-size: ($base-font-size * .6);}
 h1, h2, h3, h4, h5, h6 {font-weight: 500;}
 
-// button
+// buttons
 .btn {
     color: $white;
     text-decoration: none;
@@ -52,6 +52,37 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500;}
         background-image: none;
         background-color: $white;
         color: $primary;
+    }
+}
+
+.like {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    bottom: ($space-base * 2);
+    right: $space-md;
+    font-size: 1.375rem;
+    
+    &:before {
+        font: var(--fa-font-regular); 
+        content: "\f004";  
+        color: $color-base;              
+    }
+
+    &:hover:before {
+        cursor: pointer;
+        font: var(--fa-font-solid);
+        content: "\f004";
+        background: linear-gradient(345deg, $primary, $secondary);
+        @include background-clip;
+        @include text-fill;
+    }
+    &:focus:before {
+        font: var(--fa-font-solid); 
+        content: "\f004";
+        background: linear-gradient(345deg, $primary, $secondary);
+        @include background-clip;
+        @include text-fill;
     }
 }
 
@@ -177,37 +208,6 @@ header {
             color: $color-base;
         }
 
-        button {
-            background-color: transparent;
-            border: none;
-            position: absolute;
-            bottom: ($space-base * 2);
-            right: $space-md;
-            font-size: 1.375rem;
-            
-            &:before {
-                font: var(--fa-font-regular); 
-                content: "\f004";  
-                color: $color-base;              
-            }
-
-            &:hover:before {
-                cursor: pointer;
-                font: var(--fa-font-solid);
-                content: "\f004";
-                background: linear-gradient(345deg, $primary, $secondary);
-                @include background-clip;
-                @include text-fill;
-            }
-            &:focus:before {
-                font: var(--fa-font-solid); 
-                content: "\f004";
-                background: linear-gradient(345deg, $primary, $secondary);
-                @include background-clip;
-                @include text-fill;
-            }
-        }
-
         .card-thumbnail {
             position: relative;
             .badge {
@@ -232,7 +232,7 @@ header {
             }
         }
         .card-content {
-            padding: $space-md;
+            padding: $space-base;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -271,6 +271,23 @@ header {
         border-radius: 40px 40px 0px 0px;
         margin-top: -($space-base * 3);
         position: relative;
+        
+
+        .restaurant-details-content-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-basis: 100%;
+
+            h1 {
+                flex-basis: 86%;
+                justify-content: flex-start;
+            }
+            .like {
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 }
 
