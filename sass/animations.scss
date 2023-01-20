@@ -6,3 +6,12 @@
       transform: rotate(359deg);
     }
   }
+
+// loading cards with delay
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to { opacity: 1 }
+  }

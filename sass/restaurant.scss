@@ -72,6 +72,9 @@
                     justify-content: space-between;
                     border-radius: 15px;
                     overflow: hidden;
+                    // animation
+                    animation: fadeIn 800ms ease-in;
+                    animation-delay: 0ms;
 
                     &:first-child {
                         margin-top: $space-base;
@@ -154,4 +157,3 @@
         }
     }
 }
-
