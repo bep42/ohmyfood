@@ -16,7 +16,7 @@
         border-radius: 40px 40px 0px 0px;
         margin-top: -($space-base * 3);
         position: relative;
-        
+        flex-direction: column;
 
         .menu-title {
             display: flex;
@@ -29,8 +29,98 @@
                 justify-content: flex-start;
             }
             .like {
+                position: inherit;
+            }
+        }
+        .menu-content {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            .menu-content-title {
                 display: flex;
-                justify-content: center;
+                flex: 1;
+                flex-direction: column;
+
+                h2 {
+                    font-size: $base-font-size;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    margin-bottom: $space-xs;
+                }
+                .menu-content-title-border {
+                    width: 40px;
+                    height: 3px;
+                    background-color: $light-green;
+                }
+            } 
+            
+            .menu-content-options {
+                display: flex;
+                flex: 1;
+
+                .card {
+                    flex: 1;
+                    display: flex;
+                    border: none;
+                    padding: $space-base;
+                    margin: $space-base $space-none;
+                    font-family: $base-font-family;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-radius: 15px;
+                    overflow: hidden;
+
+                    .menu-content-options-details {
+                        display: flex;
+                        flex-direction: column;
+
+                        h3 {
+                            font-weight: 500;
+                            display: flex;
+                            margin-bottom: $space-xs;
+                        }
+                        p {
+                            font-size: $base-font-size;
+                            font-weight: 300;
+                            display: flex;
+                        }
+                    }
+
+                    .menu-content-options-price {
+                        display: flex;
+                        align-items: flex-end;
+                        align-self: flex-end;
+                        font-size: ($base-font-size * 1.125);
+                        margin-right: $space-base;
+                        font-weight: 500;
+                    }
+
+                    &:hover {
+                        .check {
+                            right: 0;
+                        }
+                    }
+
+                    .check {
+                        background-color: $light-green;
+                        width: 60px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        right: -60px;
+                        display: flex;
+                        flex-basis: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 0 15px 15px 0;
+                        overflow-x: hidden;
+
+                        i {
+                            color: $white;
+                            font-size: ($base-font-size * 1.725);
+                        }
+                    }
+                }
             }
         }
     }

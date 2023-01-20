@@ -60,6 +60,7 @@ td, th {
   border-radius: 40px 40px 0px 0px;
   margin-top: -48px;
   position: relative;
+  flex-direction: column;
 }
 .restaurant-details .menu .menu-title {
   display: flex;
@@ -72,8 +73,87 @@ td, th {
   justify-content: flex-start;
 }
 .restaurant-details .menu .menu-title .like {
+  position: inherit;
+}
+.restaurant-details .menu .menu-content {
   display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+.restaurant-details .menu .menu-content .menu-content-title {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.restaurant-details .menu .menu-content .menu-content-title h2 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 6.4px;
+}
+.restaurant-details .menu .menu-content .menu-content-title .menu-content-title-border {
+  width: 40px;
+  height: 3px;
+  background-color: rgb(153, 226, 208);
+}
+.restaurant-details .menu .menu-content .menu-content-options {
+  display: flex;
+  flex: 1;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card {
+  flex: 1;
+  display: flex;
+  border: none;
+  padding: 16px;
+  margin: 16px 0;
+  font-family: "Roboto", sans-serif;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card .menu-content-options-details {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card .menu-content-options-details h3 {
+  font-weight: 500;
+  display: flex;
+  margin-bottom: 6.4px;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card .menu-content-options-details p {
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card .menu-content-options-price {
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+  font-size: 18px;
+  margin-right: 16px;
+  font-weight: 500;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card:hover .check {
+  right: 0;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card .check {
+  background-color: rgb(153, 226, 208);
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -60px;
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
   justify-content: center;
+  border-radius: 0 15px 15px 0;
+  overflow-x: hidden;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card .check i {
+  color: rgb(255, 255, 255);
+  font-size: 27.6px;
 }
 
 body, html {
