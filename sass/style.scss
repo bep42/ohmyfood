@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500;}
     border-radius: 2rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, .35);
     transition: ease-in 300ms;
+    font-size: $base-font-size;
 
     &:hover {
         box-shadow: 0px 4px 15px rgba(0, 0, 0, .35);
@@ -56,7 +57,12 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500;}
         background-color: $white;
         color: $primary;
     }
+    &.btn-lg {
+        padding: $space-base $space-lg;
+        font-size: ($base-font-size * 1.25);
+    }
 }
+
 
 .like {
     background-color: transparent;

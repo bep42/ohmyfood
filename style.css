@@ -181,6 +181,13 @@ td, th {
   color: rgb(255, 255, 255);
   font-size: 27.6px;
 }
+.restaurant-details .menu .menu-action {
+  display: flex;
+  margin: 25.6px 0;
+  flex-basis: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
 body, html {
   font-size: 16px;
@@ -239,6 +246,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
   transition: ease-in 300ms;
+  font-size: 16px;
 }
 .btn:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
@@ -248,6 +256,10 @@ h1, h2, h3, h4, h5, h6 {
   background-image: none;
   background-color: rgb(255, 255, 255);
   color: rgb(147, 86, 220);
+}
+.btn.btn-lg {
+  padding: 16px 38.4px;
+  font-size: 20px;
 }
 
 .like {
