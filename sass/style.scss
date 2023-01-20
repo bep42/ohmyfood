@@ -2,6 +2,7 @@
 @import "variables.scss";
 @import "functions.scss";
 @import "mixins.scss";
+@import "restaurant.scss";
 
 // hello code
 body, html {
@@ -251,44 +252,6 @@ header {
     background-color: $light-grey;
     padding-bottom: $space-xl;
     gap: $space-md;
-}
-
-// single restaurant page
-.restaurant-details {
-    padding: $space-none;
-
-    .restaurant-details-thumbnail {
-        position: relative;
-        img {
-            height: 275px;
-            object-fit: cover;
-            width: 100%;
-        }
-    }
-    .restaurant-details-content {
-        background-color: $grey;
-        padding: $space-md;
-        border-radius: 40px 40px 0px 0px;
-        margin-top: -($space-base * 3);
-        position: relative;
-        
-
-        .restaurant-details-content-title {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            flex-basis: 100%;
-
-            h1 {
-                flex-basis: 86%;
-                justify-content: flex-start;
-            }
-            .like {
-                display: flex;
-                justify-content: center;
-            }
-        }
-    }
 }
 
 // footer 

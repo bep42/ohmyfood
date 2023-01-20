@@ -43,6 +43,39 @@ td, th {
   padding: 0;
 }
 
+.restaurant-details {
+  padding: 0;
+}
+.restaurant-details .restaurant-details-thumbnail {
+  position: relative;
+}
+.restaurant-details .restaurant-details-thumbnail img {
+  height: 275px;
+  object-fit: cover;
+  width: 100%;
+}
+.restaurant-details .menu {
+  background-color: rgb(234, 234, 234);
+  padding: 25.6px;
+  border-radius: 40px 40px 0px 0px;
+  margin-top: -48px;
+  position: relative;
+}
+.restaurant-details .menu .menu-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-basis: 100%;
+}
+.restaurant-details .menu .menu-title h1 {
+  flex-basis: 86%;
+  justify-content: flex-start;
+}
+.restaurant-details .menu .menu-title .like {
+  display: flex;
+  justify-content: center;
+}
+
 body, html {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -308,39 +341,6 @@ header nav .back i {
   background-color: rgb(247, 247, 247);
   padding-bottom: 51.2px;
   gap: 25.6px;
-}
-
-.restaurant-details {
-  padding: 0;
-}
-.restaurant-details .restaurant-details-thumbnail {
-  position: relative;
-}
-.restaurant-details .restaurant-details-thumbnail img {
-  height: 275px;
-  object-fit: cover;
-  width: 100%;
-}
-.restaurant-details .restaurant-details-content {
-  background-color: rgb(234, 234, 234);
-  padding: 25.6px;
-  border-radius: 40px 40px 0px 0px;
-  margin-top: -48px;
-  position: relative;
-}
-.restaurant-details .restaurant-details-content .restaurant-details-content-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-basis: 100%;
-}
-.restaurant-details .restaurant-details-content .restaurant-details-content-title h1 {
-  flex-basis: 86%;
-  justify-content: flex-start;
-}
-.restaurant-details .restaurant-details-content .restaurant-details-content-title .like {
-  display: flex;
-  justify-content: center;
 }
 
 footer {
