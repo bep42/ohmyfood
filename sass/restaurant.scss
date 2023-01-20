@@ -57,18 +57,23 @@
             .menu-content-options {
                 display: flex;
                 flex: 1;
+                flex-direction: column;
 
                 .card {
                     flex: 1;
                     display: flex;
                     border: none;
                     padding: $space-base;
-                    margin: $space-base $space-none;
+                    margin-bottom: $space-base;
                     font-family: $base-font-family;
                     flex-direction: row;
                     justify-content: space-between;
                     border-radius: 15px;
                     overflow: hidden;
+
+                    &:first-child {
+                        margin-top: $space-base;
+                    }
 
                     .menu-content-options-details {
                         width: 300px;
@@ -94,11 +99,10 @@
                     .menu-content-options-price {
                         display: flex;
                         align-self: flex-end;
-                        justify-content: center;
+                        justify-content: flex-end;
                         font-size: ($base-font-size * 1.125);
-                        margin-right: $space-base;
                         font-weight: 500;
-                        width: 60px;
+                        padding: $space-none $space-base;
                         transition: 300ms linear;
                         flex: 1;
                     }

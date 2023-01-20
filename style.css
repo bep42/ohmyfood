@@ -107,18 +107,22 @@ td, th {
 .restaurant-details .menu .menu-content .menu-content-options {
   display: flex;
   flex: 1;
+  flex-direction: column;
 }
 .restaurant-details .menu .menu-content .menu-content-options .card {
   flex: 1;
   display: flex;
   border: none;
   padding: 16px;
-  margin: 16px 0;
+  margin-bottom: 16px;
   font-family: "Roboto", sans-serif;
   flex-direction: row;
   justify-content: space-between;
   border-radius: 15px;
   overflow: hidden;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card:first-child {
+  margin-top: 16px;
 }
 .restaurant-details .menu .menu-content .menu-content-options .card .menu-content-options-details {
   width: 300px;
@@ -142,11 +146,10 @@ td, th {
 .restaurant-details .menu .menu-content .menu-content-options .card .menu-content-options-price {
   display: flex;
   align-self: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: 18px;
-  margin-right: 16px;
   font-weight: 500;
-  width: 60px;
+  padding: 0 16px;
   transition: 300ms linear;
   flex: 1;
 }
