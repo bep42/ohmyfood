@@ -71,31 +71,42 @@
                     overflow: hidden;
 
                     .menu-content-options-details {
-                        display: flex;
-                        flex-direction: column;
+                        width: 300px;
+                        text-align: left;
+                        overflow: hidden;
 
                         h3 {
                             font-weight: 500;
-                            display: flex;
                             margin-bottom: $space-xs;
+                            white-space: nowrap; 
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                         p {
                             font-size: $base-font-size;
                             font-weight: 300;
-                            display: flex;
+                            white-space: nowrap; 
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                     }
 
                     .menu-content-options-price {
                         display: flex;
-                        align-items: flex-end;
                         align-self: flex-end;
+                        justify-content: center;
                         font-size: ($base-font-size * 1.125);
                         margin-right: $space-base;
                         font-weight: 500;
+                        width: 60px;
+                        transition: 300ms linear;
+                        flex: 1;
                     }
 
                     &:hover {
+                        .menu-content-options-price {
+                            margin-right: 60px;
+                        }
                         .check {
                             right: 0;
                             i {
@@ -117,7 +128,7 @@
                         justify-content: center;
                         border-radius: 0 15px 15px 0;
                         overflow-x: hidden;
-                        transition: ease-in 300ms;
+                        transition: linear 300ms;
 
                         i {
                             color: $white;
