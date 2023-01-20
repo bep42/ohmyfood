@@ -51,15 +51,52 @@ td, th {
     transform: rotate(359deg);
   }
 }
-@keyframes fadeIn {
-  from {
+@keyframes slide-top {
+  0% {
     opacity: 0;
     transform: translateY(50%);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
+.restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+1) {
+  animation-delay: 450ms;
+}
+
+.restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+2) {
+  animation-delay: 700ms;
+}
+
+.restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+3) {
+  animation-delay: 950ms;
+}
+
+.restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+4) {
+  animation-delay: 1200ms;
+}
+
+.restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+5) {
+  animation-delay: 1450ms;
+}
+
+.restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+6) {
+  animation-delay: 1700ms;
+}
+
+.restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+7) {
+  animation-delay: 1950ms;
+}
+
+.restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+8) {
+  animation-delay: 2200ms;
+}
+
+.restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+9) {
+  animation-delay: 2450ms;
+}
+
 .restaurant-details {
   padding: 0;
 }
@@ -101,6 +138,8 @@ td, th {
   display: flex;
   flex: 1;
   flex-direction: column;
+  animation: slide-top 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 600ms;
 }
 .restaurant-details .menu .menu-content .menu-content-title h2 {
   font-size: 16px;
@@ -129,8 +168,8 @@ td, th {
   justify-content: space-between;
   border-radius: 15px;
   overflow: hidden;
-  animation: fadeIn 800ms ease-in;
-  animation-delay: 0ms;
+  opacity: 0;
+  animation: slide-top 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .restaurant-details .menu .menu-content .menu-content-options .card:first-child {
   margin-top: 16px;

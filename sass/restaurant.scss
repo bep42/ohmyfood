@@ -41,6 +41,8 @@
                 display: flex;
                 flex: 1;
                 flex-direction: column;
+                animation: slide-top 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation-delay: 600ms;
 
                 h2 {
                     font-size: $base-font-size;
@@ -72,9 +74,9 @@
                     justify-content: space-between;
                     border-radius: 15px;
                     overflow: hidden;
+                    opacity: 0;
                     // animation
-                    animation: fadeIn 800ms ease-in;
-                    animation-delay: 0ms;
+                    animation: slide-top 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
                     &:first-child {
                         margin-top: $space-base;
