@@ -97,20 +97,6 @@ td, th {
   animation-delay: 2450ms;
 }
 
-@keyframes animate-stroke {
-  0% {
-    stroke-dashoffset: 2802.7067871094px;
-    stroke-dasharray: 2802.7067871094px;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 2802.7067871094px;
-  }
-}
-.loader {
-  animation: animate-stroke 2s cubic-bezier(0.6, 0.04, 0.98, 0.335) 1s infinite both;
-}
-
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -552,11 +538,26 @@ header nav .back i {
 .steps .steps-card {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   justify-content: flex-start;
+  align-items: center;
   background-color: rgb(247, 247, 247);
   border-radius: 1.25rem;
   margin: 12.8px 0;
   padding: 25.6px 16px;
   font-weight: 400;
+}
+.steps .steps-card .bubble {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background-color: rgb(147, 86, 220);
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  left: 12.8px;
+  font-size: 14px;
 }
 .steps .steps-card i {
   margin: 0 25.6px 0 16px;

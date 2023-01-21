@@ -233,11 +233,27 @@ header {
     .steps-card {
         @include box-shadow;
         justify-content: flex-start;
+        align-items: center;
         background-color: $light-grey;
         border-radius: 1.25rem;
         margin: $space-sm $space-none;
         padding: $space-md $space-base;
         font-weight: 400;
+
+        .bubble {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            background-color: $primary;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+            left: $space-sm;
+            font-size: ($base-font-size * .875);
+        }
 
         i {
             margin: $space-none $space-md $space-none $space-base;

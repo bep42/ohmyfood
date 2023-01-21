@@ -26,22 +26,6 @@ $animation-delay: 200ms;
     animation-delay: ($animation-delay + ($i * 250ms));
   }
 }
-
-// loader 
- @keyframes animate-stroke {
-    0% {
-      stroke-dashoffset: 2802.706787109375px;
-      stroke-dasharray: 2802.706787109375px;
-    }
-  
-    100% {
-      stroke-dashoffset: 0;
-      stroke-dasharray: 2802.706787109375px;
-    }
-  }
-  .loader {
-    animation: animate-stroke 2s cubic-bezier(0.6, 0.04, 0.98, 0.335) 1s infinite both;
-  }
 // fadeOut
 @keyframes fadeOut {
     0% {
