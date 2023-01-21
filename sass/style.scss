@@ -296,3 +296,33 @@ footer {
     }
 }
 
+// loader
+.loader {
+    display: flex;
+    z-index: 1050;
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: 
+        fadeOut ease-in 3s forwards, 
+        exit 0.5s cubic-bezier(1.000, 0.000, 0.000, 1.000) 3s both,
+        color-change 3s linear infinite alternate both;
+
+    .svg-block {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding: $space-none $space-lg;
+
+        img {
+            max-width: 200px;
+            width: 100%;
+            filter: invert(1);
+            animation: jello-horizontal 0.9s infinite both;
+        }
+    }
+}

@@ -18,6 +18,7 @@
       transform: translateY(0);
     }
   }
+
 // for each .card child
 $animation-delay: 200ms;
 @for $i from 1 through 9 {
@@ -25,3 +26,80 @@ $animation-delay: 200ms;
     animation-delay: ($animation-delay + ($i * 250ms));
   }
 }
+
+// loader 
+ @keyframes animate-stroke {
+    0% {
+      stroke-dashoffset: 2802.706787109375px;
+      stroke-dasharray: 2802.706787109375px;
+    }
+  
+    100% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 2802.706787109375px;
+    }
+  }
+  .loader {
+    animation: animate-stroke 2s cubic-bezier(0.6, 0.04, 0.98, 0.335) 1s infinite both;
+  }
+// fadeOut
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes exit {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+}
+ @keyframes color-change {
+    0% {
+      background: $primary;
+    }
+    50% {
+      background: $secondary;
+    }
+    100% {
+      background: $light-green;
+    }
+  }
+  
+// jelly
+@keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+}
+  
+  
+  

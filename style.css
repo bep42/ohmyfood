@@ -97,6 +97,75 @@ td, th {
   animation-delay: 2450ms;
 }
 
+@keyframes animate-stroke {
+  0% {
+    stroke-dashoffset: 2802.7067871094px;
+    stroke-dasharray: 2802.7067871094px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 2802.7067871094px;
+  }
+}
+.loader {
+  animation: animate-stroke 2s cubic-bezier(0.6, 0.04, 0.98, 0.335) 1s infinite both;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes exit {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes color-change {
+  0% {
+    background: rgb(147, 86, 220);
+  }
+  50% {
+    background: rgb(255, 121, 218);
+  }
+  100% {
+    background: rgb(153, 226, 208);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
 .restaurant-details {
   padding: 0;
 }
@@ -540,6 +609,31 @@ footer a {
 }
 footer i {
   margin-right: 12.8px;
+}
+
+.loader {
+  display: flex;
+  z-index: 1050;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  animation: fadeOut ease-in 3s forwards, exit 0.5s cubic-bezier(1, 0, 0, 1) 3s both, color-change 3s linear infinite alternate both;
+}
+.loader .svg-block {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 0 38.4px;
+}
+.loader .svg-block img {
+  max-width: 200px;
+  width: 100%;
+  filter: invert(1);
+  animation: jello-horizontal 0.9s infinite both;
 }
 
 /*# sourceMappingURL=style.css.map */
