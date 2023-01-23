@@ -114,7 +114,8 @@
                         flex: 1;
                     }
 
-                    &:hover {
+                    &:hover, &:focus {
+                        cursor: pointer;
                         .menu-content-options-price {
                             margin-right: 60px;
                         }

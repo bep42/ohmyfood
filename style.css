@@ -281,13 +281,16 @@ td, th {
   transition: 300ms linear;
   flex: 1;
 }
-.restaurant-details .menu .menu-content .menu-content-options .card:hover .menu-content-options-price {
+.restaurant-details .menu .menu-content .menu-content-options .card:hover, .restaurant-details .menu .menu-content .menu-content-options .card:focus {
+  cursor: pointer;
+}
+.restaurant-details .menu .menu-content .menu-content-options .card:hover .menu-content-options-price, .restaurant-details .menu .menu-content .menu-content-options .card:focus .menu-content-options-price {
   margin-right: 60px;
 }
-.restaurant-details .menu .menu-content .menu-content-options .card:hover .check {
+.restaurant-details .menu .menu-content .menu-content-options .card:hover .check, .restaurant-details .menu .menu-content .menu-content-options .card:focus .check {
   right: 0;
 }
-.restaurant-details .menu .menu-content .menu-content-options .card:hover .check i {
+.restaurant-details .menu .menu-content .menu-content-options .card:hover .check i, .restaurant-details .menu .menu-content .menu-content-options .card:focus .check i {
   animation: rotation 500ms linear;
 }
 .restaurant-details .menu .menu-content .menu-content-options .card .check {
