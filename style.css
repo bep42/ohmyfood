@@ -404,8 +404,16 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(0, 0, 0);
 }
 .like:hover {
-  color: rgb(0, 0, 0);
   cursor: pointer;
+  background: linear-gradient(345deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
   animation: heartbeat 1.5s ease-in-out infinite both;
 }
 .like:focus:before {

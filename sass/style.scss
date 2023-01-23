@@ -79,8 +79,11 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500;}
     }
 
     &:hover {
-        color: $color-base;
         cursor: pointer;
+        background: linear-gradient(345deg, $primary, $secondary);
+
+        @include background-clip;
+        @include text-fill;
         animation: heartbeat 1.5s ease-in-out infinite both;
     }
 
