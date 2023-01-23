@@ -279,9 +279,16 @@ header {
 .restaurants {
     @include block-space;
     @include mobile-align;
+    
     background-color: $light-grey;
     padding-bottom: $space-xl;
-    gap: $space-md;
+
+    .block-cards {
+        display: flex;
+        flex-direction: column;
+        gap: $space-md;
+    }
+    
 }
 
 // footer 

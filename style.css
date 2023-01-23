@@ -583,6 +583,10 @@ header nav .back i {
   justify-content: center;
   background-color: rgb(247, 247, 247);
   padding-bottom: 51.2px;
+}
+.restaurants .block-cards {
+  display: flex;
+  flex-direction: column;
   gap: 25.6px;
 }
 
@@ -660,10 +664,12 @@ footer i {
     flex: 1;
   }
   .restaurants {
-    padding: 16px 0;
-    gap: 0;
+    padding: 16px 0 38.4px 0;
+    overflow: hidden;
   }
   .restaurants .restaurants-block {
+    display: flex;
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -671,17 +677,21 @@ footer i {
     width: 100%;
     flex: 1;
     padding-left: 16px;
+    max-width: 1200px;
+    margin: 32px auto;
   }
   .restaurants .restaurants-block .block-cards {
     display: flex;
     flex-direction: row;
     column-gap: 32px;
-    overflow-x: scroll;
     padding: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
   }
   .restaurants .restaurants-block .block-cards .card {
     min-width: 330px;
-    overflow-x: scroll;
   }
   footer {
     flex-direction: row;
@@ -706,10 +716,31 @@ footer i {
     display: flex;
     margin-left: 16px;
   }
+  .menu {
+    display: flex;
+    max-width: 1200px;
+    margin: -48px auto 0;
+    justify-content: center;
+    flex-direction: unset !important;
+  }
+  .menu .menu-block {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    max-width: 992px;
+    flex-direction: column;
+  }
+  .menu .menu-block .menu-title {
+    justify-content: center;
+  }
+  .menu .menu-block .menu-title .shrikhand {
+    flex-basis: unset !important;
+    margin-right: 16px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .restaurants .block-cards {
-    overflow-x: hidden;
+    overflow-x: scroll;
   }
 }
 
