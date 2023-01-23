@@ -78,22 +78,23 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500;}
         color: $color-base;              
     }
 
-    &:hover:before {
+    &:hover {
+        color: $color-base;
         cursor: pointer;
-        font: var(--fa-font-solid);
-        content: "\f004";
-        background: linear-gradient(345deg, $primary, $secondary);
-        @include background-clip;
-        @include text-fill;
+        animation: heartbeat 1.5s ease-in-out infinite both;
     }
+
     &:focus:before {
         font: var(--fa-font-solid); 
         content: "\f004";
         background: linear-gradient(345deg, $primary, $secondary);
+        animation: slide-top 1000ms ease-in;
+
         @include background-clip;
         @include text-fill;
     }
 }
+
 // card 
 .card {
     @include box-shadow;

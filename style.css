@@ -61,6 +61,29 @@ td, th {
     transform: translateY(0);
   }
 }
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
 .restaurant-details .menu .menu-content .menu-content-options .card:nth-child(n+1) {
   animation-delay: 450ms;
 }
@@ -380,24 +403,16 @@ h1, h2, h3, h4, h5, h6 {
   content: "\f004";
   color: rgb(0, 0, 0);
 }
-.like:hover:before {
+.like:hover {
+  color: rgb(0, 0, 0);
   cursor: pointer;
-  font: var(--fa-font-solid);
-  content: "\f004";
-  background: linear-gradient(345deg, rgb(147, 86, 220), rgb(255, 121, 218));
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -ms-background-clip: text;
-  -o-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -ms-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
+  animation: heartbeat 1.5s ease-in-out infinite both;
 }
 .like:focus:before {
   font: var(--fa-font-solid);
   content: "\f004";
   background: linear-gradient(345deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  animation: slide-top 1000ms ease-in;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -ms-background-clip: text;
