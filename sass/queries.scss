@@ -108,6 +108,13 @@
             }
         }
     }
+    // footer 
+    footer {
+        ul {
+            max-width: $desktop;
+            margin: 0 auto;
+        }
+    }
 }
 // desktop
 @media screen and (min-width: $desktop) {
