@@ -230,6 +230,10 @@ header {
     @include block-space;
     @include mobile-align;
 
+    h2 {
+        width: 100%;
+    }
+
     .steps-card {
         @include box-shadow;
         justify-content: flex-start;
@@ -238,6 +242,7 @@ header {
         border-radius: 1.25rem;
         margin: $space-sm $space-none;
         padding: $space-md $space-base;
+        position: relative;
         font-weight: 400;
 
         .bubble {
@@ -251,7 +256,7 @@ header {
             justify-content: center;
             align-items: center;
             color: $white;
-            left: $space-sm;
+            left: -$space-sm;
             font-size: ($base-font-size * .875);
         }
 
