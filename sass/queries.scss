@@ -1,0 +1,87 @@
+// tablet
+@media screen and (min-width: $tablet) {
+    .hero {
+        h1 {
+            font-size: ($base-font-size * 2.5);
+        }
+    }
+    .steps {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: ($space-base * 2);
+        justify-content: space-around;
+        max-width: $desktop;
+
+        h2 {
+            width: 100%;
+        }
+
+        .steps-card {
+            flex: 1;
+        }
+    }
+    .restaurants {
+        padding: $space-base $space-none;
+        gap: 0;
+
+        .restaurants-block {
+            max-width: $desktop;
+            margin: 0 auto;
+
+            h2 {
+                width: 100%;
+                flex: 1;
+                padding-left: $space-base;
+            }
+    
+            .block-cards {
+                display: flex;
+                flex-direction: row;
+                column-gap: ($space-base * 2);
+                overflow-x: scroll;
+                padding: $space-base;
+    
+                .card {
+                    min-width: 330px;
+                    overflow-x: scroll;
+                }
+            }
+        }
+
+    }
+    footer {
+        flex-direction: row;
+
+        ul {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            column-gap: ($space-base * 2);
+            align-items: center;
+
+            li {
+                display: flex;
+                order: 0;
+
+                &:first-child {
+                    order: 1;
+                }
+
+                .logo {
+                    height: 20px;
+                    margin-bottom: 0;
+                    display: flex;
+                    margin-left: $space-base;
+                }
+            }
+        }
+    }
+}
+// desktop
+@media screen and (min-width: $desktop) {
+    .restaurants {
+        .block-cards {
+            overflow-x: hidden;
+        }
+    }
+}

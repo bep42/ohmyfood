@@ -229,6 +229,7 @@ header {
 .steps {
     @include block-space;
     @include mobile-align;
+    margin: 0 auto;
 
     h2 {
         width: 100%;
@@ -347,3 +348,6 @@ footer {
         }
     }
 }
+
+// breakpoints
+@import "queries.scss";

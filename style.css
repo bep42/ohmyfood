@@ -534,6 +534,7 @@ header nav .back i {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
 }
 .steps h2 {
   width: 100%;
@@ -639,6 +640,77 @@ footer i {
   width: 100%;
   filter: invert(1);
   animation: jello-horizontal 0.9s infinite both;
+}
+
+@media screen and (min-width: 992px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+  .steps {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    justify-content: space-around;
+    max-width: 1200px;
+  }
+  .steps h2 {
+    width: 100%;
+  }
+  .steps .steps-card {
+    flex: 1;
+  }
+  .restaurants {
+    padding: 16px 0;
+    gap: 0;
+  }
+  .restaurants .restaurants-block {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .restaurants .restaurants-block h2 {
+    width: 100%;
+    flex: 1;
+    padding-left: 16px;
+  }
+  .restaurants .restaurants-block .block-cards {
+    display: flex;
+    flex-direction: row;
+    column-gap: 32px;
+    overflow-x: scroll;
+    padding: 16px;
+  }
+  .restaurants .restaurants-block .block-cards .card {
+    min-width: 330px;
+    overflow-x: scroll;
+  }
+  footer {
+    flex-direction: row;
+  }
+  footer ul {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    column-gap: 32px;
+    align-items: center;
+  }
+  footer ul li {
+    display: flex;
+    order: 0;
+  }
+  footer ul li:first-child {
+    order: 1;
+  }
+  footer ul li .logo {
+    height: 20px;
+    margin-bottom: 0;
+    display: flex;
+    margin-left: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .restaurants .block-cards {
+    overflow-x: hidden;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
